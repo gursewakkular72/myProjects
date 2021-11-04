@@ -1,0 +1,46 @@
+:root {
+    --main-color: #2e7061;
+    /* --main-color: #A9A9A9; */
+  }
+
+  html{
+    font-family: 'Roboto', sans-serif;
+      color: var(--main-color);
+  }
+
+
+
+img{
+   
+    width:100%;
+}
+
+
+
+@media screen and (min-width:600px){
+    
+
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(2,2fr);
+        grid-template-rows: repeat(1,2fr);
+        margin-top: 50px;
+    }
+
+    
+    .image-container2{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-gap: 5px;
+    }
+
+    
+
+   
+
+    
+
+    
+}

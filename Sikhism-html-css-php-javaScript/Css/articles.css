@@ -1,0 +1,153 @@
+:root{
+    --main-color: #2e7061;
+  
+  }
+
+  html{
+    font-family: 'Roboto', sans-serif;
+      color: var(--main-color);
+  }
+  
+  header h1{
+    text-align: center;
+    
+}
+
+nav ul{
+    text-align: center;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+a{
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+
+img{
+   
+    width:100%;
+}
+footer{
+    background-color:  grey;
+    padding: 10px;
+}
+
+
+@media screen and (min-width:600px){
+
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        background-color: white;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        box-shadow:  0 1px 5px 0 rgba(41,85,115,.21);
+        padding-top: 0px;
+        border-bottom: 2px solid var(--main-color);
+        background-color: white;
+        height: 75px;
+        transition: border-bottom-width 1s; 
+
+    }
+    .header-transitionHappening {
+        border-bottom-width: 5px;   
+    }
+    header h1{
+        margin-left: 150px;
+        font-size: 32px;
+        transition: font-size 1s;
+        transition: margin-left 1s;
+    }
+
+    .h1-transition{
+        margin-left: 125px;
+        font-size: 38px;
+    }
+
+   nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        
+    }
+    nav ul li {
+        margin: 10px;
+        font-size: 16px;
+       
+        transition: font-size 1s;
+    }
+
+    .nav-transition {
+       
+        font-size: 18px;
+    }
+    main{
+        max-width: 900px;
+        display: grid;
+        grid-template-rows: repeat(2,1fr);
+        grid-gap: 50px;
+        margin: auto;
+        padding: 50px;
+       
+    }
+    .section1 {
+        display: grid;
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        margin-top: 5px;
+        
+    }
+    .section2 {
+        display: grid;
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        margin-bottom: 5px;
+        
+    }
+
+    p{
+        
+        height: 280px;
+        padding: 10px;
+        border-right: 1px solid var(--main-color);
+       
+        animation-name: paraAnimation;
+        animation-duration: 2s;
+    }
+ 
+    .section1 span a {
+        color: orange;
+        text-decoration: underline;
+    }
+    .section2 span a {
+        color: orange;
+        text-decoration: underline;
+    }
+
+
+    @keyframes paraAnimation {
+        
+       
+
+        from {
+            height: 220px;
+            padding: 0px;
+        }
+        to{
+            height: 250px;
+            padding:10px;
+        }
+    }
+
+  
+
+   
+
+}

@@ -1,0 +1,26 @@
+:root{
+    --main-color: #2e7061;
+  
+  }
+
+  html{
+    font-family: 'Roboto', sans-serif;
+      color: var(--main-color);
+  }
+  
+
+@media screen and (min-width:600px){
+
+main {
+    
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+}
+
+
+}
+
+
+
+

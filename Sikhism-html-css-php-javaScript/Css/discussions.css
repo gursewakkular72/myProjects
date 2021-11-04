@@ -1,0 +1,129 @@
+:root {
+    --main-color: #2e7061;
+}
+  
+
+  html{
+    font-family: 'Roboto', sans-serif;
+      color: var(--main-color);
+  }
+
+  main{
+    border-top: 1px solid var(--main-color);
+  }
+  .signUp-wrapper{
+    
+    margin: 20px;
+    text-align: center;
+    
+}
+
+
+
+.signUp-wrapper form input{
+    outline: 0;
+    border-width: 0 0 1px;
+    border-color: var(--main-color);
+    width: 250px;
+}
+
+.signUp-wrapper form input {
+        border-color: var(--main-color);
+      }
+
+
+
+.signUp-wrapper form textarea{
+    outline: 0;
+    border-width: 0 0 1px;
+    border-color: var(--main-color);
+    width: 250px;
+}
+
+
+  .signUp-wrapper form button{
+  margin-bottom: 20px;
+  width:80px;
+  height:40px;
+  color: white;
+  font-size: 17px;
+  border-radius: 16px;
+  background-color: var(--main-color);
+  cursor:pointer;
+  
+}
+
+.errorMsg{
+  color: red;
+}
+
+  @media screen and (min-width:600px){
+
+    .signUp-wrapper{
+        max-width: 900px;
+        margin: auto;
+        text-align: center;
+        padding: 80px;
+    }
+
+    .signUp-wrapper form{
+        /* width: 100%; */
+        padding: 50px;
+
+    }
+
+    .signUp-wrapper form input{
+        outline: 0;
+        border-width: 0 0 1px;
+        border-color: var(--main-color);
+        width: 500px;
+    }
+    .signUp-wrapper form input {
+            border-color: var(--main-color);
+          }
+    
+
+
+    .signUp-wrapper form textarea{
+        outline: 0;
+        border-width: 0 0 1px;
+        border-color: var(--main-color);
+        width: 500px;
+    }
+
+    form{
+      border: solid 1px var(--main-color);
+    }
+
+    .signUp-wrapper form button {
+      margin: auto;
+      width:70px;
+      height:35px;
+      color: white;
+      font-size: 15px;
+      border-radius: 16px;
+      background-color: var(--main-color);
+      cursor:pointer;
+   }
+
+   .comment {
+     border: 1px solid#696969;
+     background-color: var(--main-color);
+     max-width: 800px;
+     margin: auto;
+     padding: 10px;
+   }
+
+   .comment div {
+     color: white;
+   }
+   span{
+     color: white;
+   }
+
+   .errorMsg{
+    color: red;
+  }
+  
+
+  }

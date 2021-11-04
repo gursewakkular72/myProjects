@@ -1,0 +1,110 @@
+:root {
+    --main-color: #2e7061;
+    /* --main-color: #A9A9A9; */
+  }
+
+
+header h1{
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+nav ul{
+    text-align: center;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+
+
+a{
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+
+nav a:hover{
+    text-decoration: underline;
+ 
+}
+header {
+    border-bottom: 1 px solid orange;
+}
+
+
+
+
+
+@media screen and (min-width:600px){
+    
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        background-color: white;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        box-shadow:  0 1px 5px 0 rgba(41,85,115,.21);
+        padding-top: 0px;
+        border-bottom: 2px solid var(--main-color);
+        background-color: white;
+        height: 75px;
+        transition: border-bottom-width 1s; 
+
+    }
+    .header-transitionHappening {
+        border-bottom-width: 5px;   
+    }
+    header h1{
+        margin-left: 150px;
+        font-size: 32px;
+        transition: font-size 1s;
+        transition: margin-left 1s;
+        cursor: pointer;
+    }
+
+    .h1-transition{
+        margin-left: 125px;
+        font-size: 38px;
+    }
+
+    h1:hover{
+        text-decoration: underline;
+
+    }
+
+   nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        
+    }
+    nav ul li {
+        margin: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: font-size 1s;
+    }
+
+    .nav-transition {
+       
+        font-size: 18px;
+    }
+
+
+    nav a:hover{
+        text-decoration: underline;
+    }
+    
+    nav a:visited{
+        text-decoration:underline;
+        color:var(--main-color);
+     }
+
+    header+img {
+        margin-top: 25px;
+    }
+}
