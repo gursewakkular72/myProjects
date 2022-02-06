@@ -186,21 +186,37 @@ function generateHashtag(str) {
 //domainName("http://www.zombie-bites.com") == "zombie-bites"
 //domainName("https://www.cnet.com") == "cnet"
 
-function domainName(url) {
-  const newArr = url.split("/");
-  // checks if the string starts with http:// or https://
-  if (newArr[2] === undefined) {
-    return newArr[0].split(".")[1];
-  }
-  if (newArr[2].split(".")[0] === "www") {
-    return newArr[2].split(".")[1];
-  } else {
-    return newArr[2].split(".")[0];
-  }
-}
+// function domainName(url) {
+//   // checks if the string starts with http:// or https://
+//   const arr = url.split(".");
+//   console.log(arr);
+// }
 
-console.log(domainName("http://github.com/carbonfive/raygun"));
-console.log(domainName("http://www.zombie-bites.com"));
-console.log(domainName("https://www.cnet.com"));
-console.log(domainName("https://youtube.com"));
-console.log(domainName("www.xakep.ru"));
+// console.log(domainName("http://github.com/carbonfive/raygun"));
+// console.log(domainName("http://www.zombie-bites.com"));
+
+////********* counting number of characters in a string */
+const countChars = function (str) {
+  const objectOfChars = {};
+  const newStr = str.toLowerCase();
+  for (const char of newStr) {
+    if (checkAlmphaNumberic(char))
+      objectOfChars[char] = ++objectOfChars[char] || 1;
+  }
+  return objectOfChars;
+};
+
+const checkAlmphaNumberic = function (char) {
+  const charCode = char.charCodeAt(0);
+
+  if (
+    (charCode >= 48 && charCode <= 57) ||
+    (charCode >= 65 && charCode <= 90) ||
+    (charCode >= 97 && charCode <= 122)
+  ) {
+    return true;
+  }
+  return false;
+};
+
+console.log(countChars("Hello World 11 23 ! ? &"));
