@@ -199,8 +199,35 @@ function domainName(url) {
   }
 }
 
-console.log(domainName("http://github.com/carbonfive/raygun"));
-console.log(domainName("http://www.zombie-bites.com"));
-console.log(domainName("https://www.cnet.com"));
-console.log(domainName("https://youtube.com"));
-console.log(domainName("www.xakep.ru"));
+// console.log(domainName("http://github.com/carbonfive/raygun"));
+// console.log(domainName("http://www.zombie-bites.com"));
+// console.log(domainName("https://www.cnet.com"));
+// console.log(domainName("https://youtube.com"));
+// console.log(domainName("www.xakep.ru"));
+
+
+////********* counting number of characters in a string */
+const countChars = function (str) {
+  const objectOfChars = {};
+  const newStr = str.toLowerCase();
+  for (const char of newStr) {
+    if (checkAlmphaNumberic(char))
+      objectOfChars[char] = ++objectOfChars[char] || 1;
+  }
+  return objectOfChars;
+};
+
+const checkAlmphaNumberic = function (char) {
+  const charCode = char.charCodeAt(0);
+
+  if (
+    (charCode >= 48 && charCode <= 57) ||
+    (charCode >= 65 && charCode <= 90) ||
+    (charCode >= 97 && charCode <= 122)
+  ) {
+    return true;
+  }
+  return false;
+};
+
+console.log(countChars("Hello World 11 23 ! ? &"));
