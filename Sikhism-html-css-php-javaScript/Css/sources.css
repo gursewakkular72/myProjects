@@ -1,0 +1,60 @@
+:root {
+    --main-color: #2e7061;
+ 
+  }
+
+  html{
+    font-family: 'Roboto', sans-serif;
+      color: var(--main-color);
+  }
+
+
+  td{
+    padding: 2rem;
+    border: 1px solid white;
+  }
+
+  table{
+    text-align: center;
+      border: 1px solid white;
+      width: 100%;
+      background-color: white;
+    
+     
+  
+  
+  }
+
+
+
+  .tf{
+    overflow-x:scroll;
+  }
+
+  .pagetable{
+    overflow-x: auto;
+  }
+  img{
+    width:50px;
+    height:50px;
+  }
+
+  .tf a {
+    color: orange;
+    text-decoration: underline;
+  }
+
+  @media screen and (min-width:600px){
+  
+    .pagetable{
+        max-width: 700px;
+        margin: auto;
+        padding:50px;
+      }
+
+      .tf a {
+        color: orange;
+        text-decoration: underline;
+      }
+
+}
