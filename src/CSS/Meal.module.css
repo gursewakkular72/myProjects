@@ -1,0 +1,41 @@
+.div-meal {
+  background-color: #7aae70;
+  /* border-bottom: 1px solid #45062e; */
+  width: 100%;
+  color: #0c110b;
+  font-size: 1.6rem;
+  padding: 0.8rem;
+  margin-bottom: 1.6rem;
+  border-radius: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.div-meal-name {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.div-meal-description {
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+.div-meal-price {
+  margin-top: 0.8rem;
+  font-weight: 900;
+}
+.div-add-meal-form {
+  display: flex;
+  align-content: center;
+}
+
+/* .div-meal-span {
+  display: block;
+} */
+
+/* - Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/

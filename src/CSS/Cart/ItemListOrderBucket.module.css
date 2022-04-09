@@ -1,0 +1,16 @@
+.div-item-details {
+  margin-bottom: 0.8rem;
+  display: grid;
+  grid-template-columns: 45fr 20fr 35fr;
+  font-size: 1.4rem;
+  /* justify-content: space-between; */
+}
+
+/* .count {
+  border: 0.5px solid red;
+  border-width: 25%;
+} */
+
+.price {
+  justify-self: end;
+}

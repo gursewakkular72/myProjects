@@ -1,0 +1,55 @@
+.div-nav {
+  background-color: #7aae70;
+  padding: 1.6rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.6rem;
+  color: #0c110b;
+  /* color: #fff; */
+}
+
+.nav-a {
+  text-decoration: none;
+  color: #182316;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.nav-ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.nav-ul-li {
+  display: inline-block;
+}
+
+.button {
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.nav-ul-li-last::after {
+  content: attr(data-item-in-cart);
+  background-color: #0c110b;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  color: #7aae70;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(120%, -50%);
+  font-size: 1.2rem;
+}
+
+/* - Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
