@@ -285,6 +285,7 @@ function validAnagram(str1, str2) {
   return true;
 }
 
+<<<<<<< HEAD
 // console.log(validAnagram("aaz", "zza"));
 // console.log(validAnagram("azz", "zaz"));
 // console.log(validAnagram("", ""));
@@ -348,3 +349,37 @@ console.log(countUniqueValues([1, 1, 1, 1, 1, 2]), 2); // 2
 console.log(countUniqueValues([1, 2, 3, 4, 4, 4, 7, 7, 12, 12, 13]), 7); // 7
 console.log(countUniqueValues([]), 0); // 0
 console.log(countUniqueValues([-2, -1, -1, 0, 1]), 4); // 4
+=======
+// console.log(domainName("http://github.com/carbonfive/raygun"));
+// console.log(domainName("http://www.zombie-bites.com"));
+// console.log(domainName("https://www.cnet.com"));
+// console.log(domainName("https://youtube.com"));
+// console.log(domainName("www.xakep.ru"));
+
+
+////********* counting number of characters in a string */
+const countChars = function (str) {
+  const objectOfChars = {};
+  const newStr = str.toLowerCase();
+  for (const char of newStr) {
+    if (checkAlmphaNumberic(char))
+      objectOfChars[char] = ++objectOfChars[char] || 1;
+  }
+  return objectOfChars;
+};
+
+const checkAlmphaNumberic = function (char) {
+  const charCode = char.charCodeAt(0);
+
+  if (
+    (charCode >= 48 && charCode <= 57) ||
+    (charCode >= 65 && charCode <= 90) ||
+    (charCode >= 97 && charCode <= 122)
+  ) {
+    return true;
+  }
+  return false;
+};
+
+console.log(countChars("Hello World 11 23 ! ? &"));
+>>>>>>> 443fbe97e56e8425e47a210e20bc5170e05f34d2
