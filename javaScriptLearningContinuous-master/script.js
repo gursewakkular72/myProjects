@@ -219,4 +219,132 @@ const checkAlmphaNumberic = function (char) {
   return false;
 };
 
-console.log(countChars("Hello World 11 23 ! ? &"));
+// console.log(countChars("Hello World 11 23 ! ? &"));
+
+//*********** Check if two arrays are equal in lenght and the one of the arrays contains the square root of every element in the other array.
+//********* the order of the sqaure root does not have correspond to the element in the first array/
+// same([1,2,3,2], [9,1,4,4])
+
+const same = function (arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    console.log(`the lenght of array does not match; it has to be same.`);
+    return;
+  }
+
+  const objectOfArr1 = {};
+  const objectOfArr2 = {};
+
+  for (let item of arr1) {
+    objectOfArr1[item] = ++objectOfArr1[item] || 1;
+  }
+
+  for (let item of arr2) {
+    // console.log(item);
+    objectOfArr2[item] = ++objectOfArr2[item] || 1;
+  }
+
+  console.log(objectOfArr1);
+  console.log(objectOfArr2);
+
+  for (let prop in objectOfArr1) {
+    if (!(prop ** 2 in objectOfArr2)) {
+      return false;
+    }
+
+    if (objectOfArr1[prop] !== objectOfArr2[prop ** 2]) {
+      return false;
+    }
+  }
+  return true;
+};
+
+// console.log(same([1, 2, 3, 2], [9, 1, 4, 4]));
+// console.log(same([1, 2, 3, 2], [9, 1, 4]));
+// console.log(same([1, 5, 2, 2], [4, 1, 25, 4]));
+// console.log(same([1, 5, 3, 2], [9, 1, 4, 4]));
+
+function validAnagram(str1, str2) {
+  // add whatever parameters you deem necessary - good luck!
+  if (str1.lenght !== str2.lenght) return;
+  const obj1 = {};
+  const obj2 = {};
+  for (let item of str1) {
+    obj1[item] = ++obj1[item] || 1;
+  }
+  for (let item of str2) {
+    obj2[item] = ++obj2[item] || 1;
+  }
+
+  console.log(obj1);
+  console.log(obj2);
+
+  for (let item in obj1) {
+    if (!(obj1[item] === obj2[item])) return false;
+  }
+
+  return true;
+}
+
+// console.log(validAnagram("aaz", "zza"));
+// console.log(validAnagram("azz", "zaz"));
+// console.log(validAnagram("", ""));
+// console.log(validAnagram(" ", "  "));
+// console.log(validAnagram("awesome", "weaosme"));
+
+// ******** Write a function that returns the pair in the form of array whose sum is zero otherwise return undefined. The function should except a sorted array.
+// sumZero([-4,-2,-1,0,1,3,5,6]);
+
+const sumZero = function (arr) {
+  let left = 0;
+  let right = arr.length - 1;
+  while (left < right) {
+    let sum = arr[left] + arr[right];
+    if (sum === 0) {
+      return [arr[left], arr[right]];
+    } else if (sum < 0) {
+      left++;
+    } else {
+      right--;
+    }
+  }
+};
+
+// console.log(sumZero([-4, -2, -1, 0, 1, 3, 5, 6]));
+
+// ***---create a function "countUniqueValues" which counts the amount of unique values inside of a sorted array.
+
+// countUniqueValues([1,1,1,1,1,2]) // 2
+// countUniqueValues([1,2,3,4,4,4,7,7,12,12,13]) // 7
+// countUniqueValues([]) // 0
+// countUniqueValues([-2,-1,-1,0,1]) // 4
+
+//----The solution below is without the two pointers approach
+// const countUniqueValues = function (arr) {
+//   const obj = {};
+//   for (let item of arr) {
+//     if (obj[item] === 1) {
+//     } else {
+//       obj[item] = 1;
+//     }
+//   }
+//   return Object.keys(obj).length;
+// };
+
+///--The solution below is with the two pointers apporach
+
+const countUniqueValues = function (arr) {
+  if (arr.length === 0) return 0;
+  let j = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== arr[j]) {
+      // console.log(arr[i], "!==", arr[j]);
+      j++;
+    }
+  }
+  return j + 1;
+};
+
+console.log(countUniqueValues([1, 1, 1, 1, 1, 2]), 2); // 2
+console.log(countUniqueValues([1, 2, 3, 4, 4, 4, 7, 7, 12, 12, 13]), 7); // 7
+console.log(countUniqueValues([]), 0); // 0
+console.log(countUniqueValues([-2, -1, -1, 0, 1]), 4); // 4
